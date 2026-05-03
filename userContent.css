@@ -1,0 +1,24 @@
+@-moz-document url("about:newtab"), url("about:home") {
+    body,
+    .outer-wrapper,
+    #newtab-customize-overlay {
+        background: transparent !important;
+    }
+    :root {
+        --newtab-background-card: transparent !important;
+    }
+    .top-site-outer .tile {
+        box-shadow: none !important;
+    }
+    .shortcuts-refresh .top-site-outer:hover .tile {
+        background-color: transparent !important;
+    }
+    .card-outer,
+    .card-outer .card-preview-image-outer {
+        background-color: rgba(20, 20, 20, 0.4) !important;
+    }
+    .customize-menu,
+    .customize-menu .close-button-wrapper {
+        background-color: rgba(20, 20, 20, 0.4) !important;
+    }
+}

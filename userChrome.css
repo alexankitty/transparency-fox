@@ -1,0 +1,111 @@
+/* The main window background */
+#main-window {
+    -moz-appearance: /*-moz-mac-vibrancy-dark*/ none !important; /* -moz-win-glass */
+    background-color: rgba(25, 25, 25, 0.5) !important;
+    background-image: none !important;
+    /*background: url(background.jpg);*/
+}
+
+#navigator-toolbox {
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* Transparent Stuff */
+#TabsToolbar,
+#titlebar,
+#navigator-toolbox,
+box,
+.theme-body {
+    -moz-appearance: none !important;
+    background-color: rgba(0, 0, 0, 0) !important;
+    background-image: none !important;
+    border: none;
+    outline: none;
+}
+
+/* Light Transparent Stuff */
+.tab-content,
+#tabs-newtab-button {
+    -moz-appearance: none !important;
+    color: #eee !important;
+    background-image: none !important;
+    fill: #eee !important;
+}
+
+.tab-content[selected="true"] {
+    color: var(--lwt-tab-text) !important;
+}
+tab.tabbrowser-tab {
+    overflow-clip-margin: unset !important;
+    overflow: hidden !important;
+}
+vbox.tab-background:is([selected], [multiselected]) {
+    background-color: color-mix(
+        in srgb,
+        currentColor 15%,
+        transparent
+    ) !important;
+    filter: none !important;
+    border-radius: 5px;
+}
+
+:root:is(:-moz-lwtheme, [lwtheme])
+    #tabbrowser-arrowscrollbox
+    > .tabbrowser-tab
+    > .tab-stack
+    > .tab-background[selected],
+:root:is(:-moz-lwtheme, [lwtheme])
+    #tabbrowser-tabs:not([movingtab])
+    > #tabbrowser-arrowscrollbox
+    > .tabbrowser-tab
+    > .tab-stack
+    > vbox.tab-background[selected] {
+    background-image: none !important;
+}
+
+.browser-toolbar {
+    @media not -moz-pref("sidebar.verticalTabs") {
+        &:not(.browser-titlebar) {
+            background-color: transparent !important;
+        }
+    }
+}
+
+@media -moz-pref("browser.urlbar.searchModeSwitcher.featureGate") or -moz-pref("browser.urlbar.scotchBonnet.enableOverride") {
+    @media not -moz-pref("browser.urlbar.unifiedSearchButton.always") {
+        #urlbar-searchmode-switcher {
+            background-color: transparent !important;
+        }
+    }
+}
+
+#tabbrowser-tabs:not([orient="vertical"])
+    #tabs-newtab-button
+    image.toolbarbutton-icon {
+    padding: 7px !important;
+}
+
+:root {
+    --toolbar-field-focus-background-color: rgba(20, 20, 20, 1) !important;
+    --arrowpanel-background: rgba(20, 20, 20, 1) !important;
+    --tabpanel-background-color: transparent !important;
+    --in-content-page-background: transparent !important;
+}
+
+#browser:not(.browser-toolbox-background) {
+    :root[lwtheme] & {
+        background-color: transparent !important;
+        background-image: none !important;
+    }
+}
+
+toolbar {
+    background-color: rgba(20, 20, 20, 0.4) !important;
+}
+
+/* Nuke all borders and outlines, they look bad */
+* {
+    border: none !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
