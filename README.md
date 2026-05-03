@@ -9,8 +9,14 @@ Works best under dark theme.
 
 # config
 In `about:config` the following need to be changed
+
+
 `userChrome.tab.bottom_rounded_corner` => false
+
+
 `toolkit.legacyUserProfileCustomizations.stylesheets` => true
+
+
 ## optionally
 `userChrome.tab.dynamic_separator` => false
 
