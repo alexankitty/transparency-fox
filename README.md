@@ -1,3 +1,5 @@
+<img width="2559" height="1440" alt="image" src="https://github.com/user-attachments/assets/8ca048dd-1309-4c29-805e-ef63bec37d26" />
+
 # transparent-fox
 Transparent firefox userchrome for people who want transparency and blur.
 
