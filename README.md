@@ -16,6 +16,7 @@ In `about:config` the following need to be changed
 
 `toolkit.legacyUserProfileCustomizations.stylesheets` => true
 
+`browser.tabs.allow_transparent_browser` => true
 
 ## optionally
 `userChrome.tab.dynamic_separator` => false
@@ -26,6 +27,8 @@ Copy paste the contents of the repository into your firefox profile/chrome folde
 Menu > Help > More Troubleshooting Information, then under Profile Directory click open directory.
 
 Make a new folder called `chrome`, and copy the contents in.
+
+Restart your browser after installing and changing `about:config` items.
 
 # Recommendations
 Use this theme with hyprland or another compositor that has blurring support. Be sure to turn blur on.
