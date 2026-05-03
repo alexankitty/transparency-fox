@@ -35,4 +35,4 @@ Use this theme with hyprland or another compositor that has blurring support. Be
 
 Combine this with [Transparent Zen](https://addons.mozilla.org/en-US/firefox/addon/transparent-zen/) for a more transparent surfing experience. (Yes I know it's for Zen, it still works.)
 
-Combine with with [Natsumi Browser](https://github.com/greeeen-dev/natsumi-browser) for zen like browser gradients. There is a natsumi folder included for this usage.
+Combine with with [Natsumi Browser](https://github.com/greeeen-dev/natsumi-browser) for zen like browser gradients. There is a natsumi folder included for this usage. I recommend turning off Starlight Design 2, and using the material tabs. Turn off use firefox accent theme accent color where possible
