@@ -1,4 +1,4 @@
-@-moz-document url("about:newtab"), url("about:home") {
+@-moz-document url-prefix(about:) {
     body,
     .outer-wrapper,
     #newtab-customize-overlay {
@@ -6,6 +6,15 @@
     }
     :root {
         --newtab-background-card: transparent !important;
+        --background-color-canvas: rgba(20, 20, 20, 0.4) !important;
+        --background-color-box: rgba(20, 20, 20, 0.2) !important;
+        --table-row-background-color-alternate: rgba(
+            20,
+            20,
+            20,
+            0.2
+        ) !important;
+        background-color: transparent !important;
     }
     .top-site-outer .tile {
         box-shadow: none !important;
@@ -20,5 +29,37 @@
     .customize-menu,
     .customize-menu .close-button-wrapper {
         background-color: rgba(20, 20, 20, 0.4) !important;
+    }
+    .sticky-container,
+    .main-search,
+    .main-heading {
+        background: transparent !important;
+    }
+    .login-selected {
+        background: transparent !important;
+    }
+    header {
+        background: transparent !important;
+    }
+    #sidebar,
+    #navigation,
+    .navigation {
+        background-color: rgba(20, 20, 20, 0.2);
+    }
+    vbox.deck-selected {
+        display: none;
+    }
+    table {
+        background-color: transparent !important;
+    }
+    tree {
+        background-color: transparent !important;
+    }
+    treecol,
+    .tree-columnpicker-button {
+        background-color: rgba(20, 20, 20, 0.2) !important;
+    }
+    .section-secondary {
+        --mr-screen-background-color: rgba(80, 80, 80, 0.2) !important;
     }
 }
