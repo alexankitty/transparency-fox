@@ -34,3 +34,5 @@ Restart your browser after installing and changing `about:config` items.
 Use this theme with hyprland or another compositor that has blurring support. Be sure to turn blur on.
 
 Combine this with [Transparent Zen](https://addons.mozilla.org/en-US/firefox/addon/transparent-zen/) for a more transparent surfing experience. (Yes I know it's for Zen, it still works.)
+
+Combine with with [Natsumi Browser](https://github.com/greeeen-dev/natsumi-browser) for zen like browser gradients. There is a natsumi folder included for this usage.
