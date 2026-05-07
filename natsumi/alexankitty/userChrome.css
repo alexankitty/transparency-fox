@@ -66,8 +66,7 @@ vbox.tab-background:is([selected], [multiselected]) {
 }
 
 :root {
-    --toolbar-field-focus-background-color: rgba(20,20,20,1)!important;
-    --arrowpanel-background: rgba(20,20,20,1)!important;
+
     --tabpanel-background-color: transparent !important;
     --in-content-page-background: transparent !important;
 }
@@ -81,6 +80,10 @@ vbox.tab-background:is([selected], [multiselected]) {
 
 toolbar {
     background-color: rgba(20,20,20,0.4)!important;
+}
+
+browser.dialogFrame {
+    background-color: -moz-dialog;
 }
 
 /* Nuke all borders and outlines, they look bad */
