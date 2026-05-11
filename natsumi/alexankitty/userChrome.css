@@ -92,3 +92,17 @@ browser.dialogFrame {
 	outline: none !important;
 	box-shadow: none !important;
 }
+
+#customization-panel-container {
+    padding: 25px var(--customization-panel-padding) 25px!important;
+}
+
+#customization-panelWrapper {
+& > .panel-arrowcontent {
+        background: var(--arrowpanel-background)!important;
+    }
+}
+
+#browser-bottombox {
+    background-color: transparent!important;
+}
