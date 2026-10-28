@@ -1,65 +1,76 @@
 @-moz-document url-prefix(about:) {
-    body,
-    .outer-wrapper,
-    #newtab-customize-overlay {
+    body, .outer-wrapper, #newtab-customize-overlay {
         background: transparent !important;
     }
     :root {
         --newtab-background-card: transparent !important;
-        --background-color-canvas: rgba(20, 20, 20, 0.4) !important;
-        --background-color-box: rgba(20, 20, 20, 0.2) !important;
-        --table-row-background-color-alternate: rgba(
-            20,
-            20,
-            20,
-            0.2
-        ) !important;
+        --background-color-canvas: rgba(20,20,20,0.4)!important;
+        --background-color-box: rgba(20,20,20,0.2)!important;
+        --table-row-background-color-alternate: rgba(20,20,20,0.2)!important;
         background-color: transparent !important;
     }
     .top-site-outer .tile {
-        box-shadow: none !important;
+        box-shadow: none!important;
     }
     .shortcuts-refresh .top-site-outer:hover .tile {
-        background-color: transparent !important;
+        background-color: transparent!important;
     }
-    .card-outer,
-    .card-outer .card-preview-image-outer {
-        background-color: rgba(20, 20, 20, 0.4) !important;
+    .card-outer, .card-outer .card-preview-image-outer {
+        background-color: rgba(20,20,20,0.4)!important;
     }
-    .customize-menu,
-    .customize-menu .close-button-wrapper {
-        background-color: rgba(20, 20, 20, 0.4) !important;
+    .customize-menu, .customize-menu .close-button-wrapper {
+        background-color: rgba(20,20,20,0.4)!important;
     }
-    .sticky-container,
-    .main-search,
-    .main-heading {
-        background: transparent !important;
+    .sticky-container, .main-search, .main-heading {
+        background: transparent!important;
     }
     .login-selected {
-        background: transparent !important;
+        background: transparent!important;
     }
     header {
-        background: transparent !important;
+        background: transparent!important;
     }
-    #sidebar,
-    #navigation,
-    .navigation {
-        background-color: rgba(20, 20, 20, 0.2);
+    #sidebar, #navigation, .navigation {
+        background-color: rgba(20,20,20,0.2);
     }
     vbox.deck-selected {
         display: none;
     }
-    table {
-        background-color: transparent !important;
+    table{
+        background-color: transparent!important;
     }
     tree {
-        background-color: transparent !important;
+        background-color: transparent!important;
     }
-    treecol,
-    .tree-columnpicker-button {
-        background-color: rgba(20, 20, 20, 0.2) !important;
+    treecol, .tree-columnpicker-button {
+        background-color: rgba(20,20,20,0.2)!important;
     }
     .section-secondary {
-        --mr-screen-background-color: rgba(80, 80, 80, 0.2) !important;
+        --mr-screen-background-color: rgba(80,80,80,0.2)!important;
+    }
+    .toc {
+        display: none!important;
+    }
+    .shortcuts-refresh .top-site-outer .tile {
+        background-color: transparent!important;
+        box-shadow: none!important;
+    }
+    @media not -moz-pref("natsumi.theme.classic-preferences") {
+        body[natsumi-preferences-redesign] {
+            & .main-content {
+                --top-hide: 72px; /* height of the gap above the search bar */
+
+                mask-image: linear-gradient(
+                    to bottom,
+                    transparent 0,
+                    transparent var(--top-hide),
+                                            #000 var(--top-hide)
+                ) !important;
+
+                &::before {
+                    background: none !important;
+                }
+            }
+        }
     }
 }

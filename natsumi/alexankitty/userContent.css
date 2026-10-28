@@ -55,4 +55,22 @@
         background-color: transparent!important;
         box-shadow: none!important;
     }
+    @media not -moz-pref("natsumi.theme.classic-preferences") {
+        body[natsumi-preferences-redesign] {
+            & .main-content {
+                --top-hide: 72px; /* height of the gap above the search bar */
+
+                mask-image: linear-gradient(
+                    to bottom,
+                    transparent 0,
+                    transparent var(--top-hide),
+                                            #000 var(--top-hide)
+                ) !important;
+
+                &::before {
+                    background: none !important;
+                }
+            }
+        }
+    }
 }
