@@ -14,9 +14,6 @@
  #TabsToolbar, #titlebar, #navigator-toolbox, box, .theme-body {
 	-moz-appearance: none !important;
 	background-color: rgba(0, 0, 0, 0) !important;
-	background-image: none !important;
-	border: none;
-	outline: none;
 }
 
 /* Light Transparent Stuff */
@@ -84,13 +81,6 @@ toolbar {
 
 browser.dialogFrame {
     background-color: -moz-dialog;
-}
-
-/* Nuke all borders and outlines, they look bad */
-* {
-	border: none !important;
-	outline: none !important;
-	box-shadow: none !important;
 }
 
 #customization-panel-container {
