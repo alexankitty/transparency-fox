@@ -73,4 +73,81 @@
             }
         }
     }
+    @media (not -moz-pref("natsumi.theme.classic-preferences")) and (not -moz-pref("natsumi.theme.addons-style-unsupported")) {
+        body[natsumi-addons-redesign] {
+            & .main-search {
+                --top-hide: 72px; /* height of the gap above the search bar */
+
+                mask-image: linear-gradient(
+                    to bottom,
+                    transparent 0,
+                    transparent var(--top-hide),
+                                            #000 var(--top-hide)
+                ) !important;
+                &::before {
+                    background: none !important;
+                }
+            }
+        }
+    }
+    body[natsumi-addons-redesign] {
+        /* Remove the solid backgrounds */
+        & #sidebar,
+        & moz-page-nav,
+        & #content,
+        & #full,
+        & .sticky-container,
+        & .main-search,
+        & .main-heading {
+            background: transparent !important;
+        }
+
+        /* Lock the page to the viewport; only #main scrolls */
+        & #full {
+            height: 100vh;
+            overflow: hidden;
+        }
+
+        & #content {
+            display: flex;
+            flex-direction: column;
+            height: 100vh;
+            min-height: 0;
+        }
+
+        & addon-page-header {
+            display: contents;
+        }
+
+        /* Header is a normal block now, not sticky */
+        & .sticky-container {
+            position: static !important;
+            flex: none;
+        }
+
+        & global-warnings {
+            flex: none;
+        }
+
+        /* The scroller. Anything above its top edge is simply clipped. */
+        & #main {
+            flex: 1;
+            min-height: 0;
+            margin-bottom: 0;
+            padding-bottom: 28px;
+            overflow-y: auto;
+            /* optional: short fade as content leaves the top */
+            mask-image: linear-gradient(to bottom, transparent 0, #000 12px);
+        }
+    }
+    body[natsumi-addons-redesign] {
+        & panel-list {
+            --panel-background: color-mix(in srgb, Canvas 65%, transparent);
+            --panel-border-color: color-mix(in srgb, CanvasText 15%, transparent);
+
+            background: var(--panel-background);
+            backdrop-filter: blur(24px) saturate(1.4);
+            border-radius: var(--border-radius-medium, 8px);
+        }
+    }
 }
